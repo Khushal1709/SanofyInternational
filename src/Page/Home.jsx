@@ -31,10 +31,10 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Home1 from "../image/home1.svg";
-import Home2 from "../image/home2.svg";
-import Home3 from "../image/home3.svg";
-import Home4 from "../image/home4.svg";
+import Home1 from "../image/Home1.svg";
+import Home2 from "../image/Home2.svg";
+import Home3 from "../image/Home3.svg";
+import Home4 from "../image/Home4.svg";
 import Home12 from "../image/Home12.svg";
 import Home13 from "../image/Home13.svg";
 import Bottomcontact from "../components/Bottomcontact";
