@@ -1,4 +1,4 @@
-import c1 from "../image/c1.svg";
+import contact1 from "../image/contact1.svg";
 import email from "../image/email.svg";
 import phone from "../image/phone.svg";
 import location from "../image/location.svg";
@@ -39,7 +39,7 @@ export default function Contact() {
               {/* Background image - hidden on mobile */}
               <div className="hidden md:block">
                 <LazyLoadImage
-                  src={c1}
+                  src={contact1}
                   alt="Contact background"
                   className="w-full h-full object-cover rounded-3xl"
                 />
