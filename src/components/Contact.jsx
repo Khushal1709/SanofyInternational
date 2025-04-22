@@ -51,7 +51,7 @@ export default function Contact() {
               bg-white rounded-3xl shadow-xl p-4 sm:p-6 
               md:absolute md:top-1/2 md:left-6 md:-translate-y-1/2 
               md:max-w-md md:w-[90%] lg:w-[400px]
-              ${!c1 || window.innerWidth < 768 ? "w-full" : ""}
+              ${!contact1 || window.innerWidth < 768 ? "w-full" : ""}
             `}
               >
                 <div className="flex flex-col gap-5 sm:gap-6">
