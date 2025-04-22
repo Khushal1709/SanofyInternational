@@ -1,111 +1,179 @@
-"use client"
-
-import { useState } from "react"
-import Navbar from "./Navbar"
-import Footer from "./Footer"
-import C1 from "../image/C1.svg"
-import { Link } from "react-router-dom"
-
-const locations = [
-  {
-    id: "surat",
-    name: "Surat",
-    address:
-      "102, Ashapura Square Nizampura Plot 77A Ambika Industrial Estate Opp Vanmora Near Navjivan Circle Udhna-Magdalla, Main Road, Surat, Gujarat",
-    email: "info.zulasmore@gmail.com",
-    phone: "9824441703",
-    image: C1
-  },
-  {
-    id: "ahmedabad",
-    name: "Ahmedabad",
-    address: "Some Ahmedabad Address Here",
-    email: "ahmedabad@example.com",
-    phone: "1234567890",
-    image: C1
-  },
-  {
-    id: "mumbai",
-    name: "Mumbai",
-    address: "Some Mumbai Address Here",
-    email: "mumbai@example.com",
-    phone: "0987654321",
-    image: C1
-  }
-]
+import c1 from "../image/c1.svg";
+import email from "../image/email.svg";
+import phone from "../image/phone.svg";
+import location from "../image/location.svg";
+import { motion } from "framer-motion";
+import Test from "../components/Test";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Contact() {
-  const [selectedLocation, setSelectedLocation] = useState(locations[0])
-
   return (
     <>
-      <Navbar />
-      <div className="bg-white p-6 md:p-12">
-        <div className="text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold">Contact Us</h2>
-          <p className="text-sm text-gray-600">
-            <Link to="/" className="hover:underline">
-              Home
-            </Link>
-            /Contact Us
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-2 my-6">
-          {locations.map(location => (
-            <button
-              key={location.id}
-              onClick={() => setSelectedLocation(location)}
-              className={`px-4 py-2 border rounded-md transition ${
-                selectedLocation.id === location.id
-                  ? "bg-lime-950 text-white"
-                  : "bg-white text-black"
-              }`}
-            >
-              {location.name}
+      <div className="bg-white px-4 sm:px-6 py-8 sm:py-12">
+        {/* Contact Us Header Section */}
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-8 sm:mb-12"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <button className="mb-3 px-4 py-1 bg-gray-200 rounded-full text-sm">
+              Contact Us
             </button>
-          ))}
-        </div>
+            <h1 className="text-2xl md:text-3xl font-bold px-2">
+              Get in touch with us today for expert assistance
+            </h1>
+          </motion.div>
 
-        {/* First section - always shows image first, then details */}
-        <div className="max-w-7xl mx-auto mb-10">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div className="order-1 md:order-1">
-              <img
-                src={selectedLocation.image || "/placeholder.svg"}
-                alt="Location Image"
-                className="w-full max-w-[500px] h-auto rounded-lg mx-auto"
-              />
-            </div>
-            <div className="order-2 md:order-2 bg-white p-6 rounded-lg shadow-md text-center md:text-left">
-              <h3 className="text-xl font-semibold">{selectedLocation.name}</h3>
-              <p className="mt-2 text-gray-700">{selectedLocation.address}</p>
-              <p className="mt-2 text-gray-700">{selectedLocation.email}</p>
-              <p className="mt-2 text-gray-700">{selectedLocation.phone}</p>
-            </div>
-          </div>
-        </div>
+          {/* Contact Info Section - Responsive for all devices */}
+          <motion.div
+            className="w-full mb-12 sm:mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <div className="relative rounded-3xl overflow-hidden">
+              {/* Background image - hidden on mobile */}
+              <div className="hidden md:block">
+                <LazyLoadImage
+                  src={c1}
+                  alt="Contact background"
+                  className="w-full h-full object-cover rounded-3xl"
+                />
+              </div>
 
-        {/* Second section - always shows details first, then image */}
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div className="order-2 md:order-1 bg-white p-6 rounded-lg shadow-md text-center md:text-left">
-              <h3 className="text-xl font-semibold">{selectedLocation.name}</h3>
-              <p className="mt-2 text-gray-700">{selectedLocation.address}</p>
-              <p className="mt-2 text-gray-700">{selectedLocation.email}</p>
-              <p className="mt-2 text-gray-700">{selectedLocation.phone}</p>
+              {/* Contact Card - Full width on mobile, overlay on desktop */}
+              <div
+                className={`
+              bg-white rounded-3xl shadow-xl p-4 sm:p-6 
+              md:absolute md:top-1/2 md:left-6 md:-translate-y-1/2 
+              md:max-w-md md:w-[90%] lg:w-[400px]
+              ${!c1 || window.innerWidth < 768 ? "w-full" : ""}
+            `}
+              >
+                <div className="flex flex-col gap-5 sm:gap-6">
+                  {/* Email */}
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0">
+                      <img
+                        src={email || "/placeholder.svg"}
+                        alt="email"
+                        className="h-8 w-8 sm:h-9 sm:w-9 bg-black rounded-lg p-1"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-base sm:text-lg font-medium">
+                        Email Address:
+                      </span>
+                      <span className="text-sm sm:text-base break-words">
+                        sanofyinternational05@gmail.com
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Phone */}
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0">
+                      <img
+                        src={phone || "/placeholder.svg"}
+                        alt="phone"
+                        className="h-8 w-8 sm:h-9 sm:w-9 bg-black rounded-lg p-1"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-base sm:text-lg font-medium">
+                        Phone Number:
+                      </span>
+                      <span className="text-sm sm:text-base">
+                        +91 79901 65810
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Location */}
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0">
+                      <LazyLoadImage
+                        src={location}
+                        alt="location"
+                        className="h-8 w-8 sm:h-9 sm:w-9 bg-black rounded-lg p-1"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-base sm:text-lg font-medium">
+                        Location:
+                      </span>
+                      <span className="text-sm sm:text-base break-words">
+                        Nana Varachha, Surat, India
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="order-1 md:order-2">
-              <img
-                src={selectedLocation.image || "/placeholder.svg"}
-                alt="Location Image"
-                className="w-full max-w-[500px] h-auto rounded-lg mx-auto"
-              />
+          </motion.div>
+
+          {/* Contact Form Section */}
+          <motion.div
+            className="w-full"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
+              {/* Left Text */}
+              <div className="text-left">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 px-1">
+                  Fill out this form, let's start trading globally!
+                </h2>
+              </div>
+
+              {/* Form Card */}
+              <div className="bg-gray-100 rounded-2xl p-5 sm:p-6 md:p-8 shadow-md w-full">
+                <form className="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    className="w-full p-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black text-base"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    className="w-full p-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black text-base"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    className="w-full p-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black text-base"
+                  />
+                  <select className="w-full p-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black text-base">
+                    <option value="">Subject</option>
+                    <option value="trading">Trading Inquiry</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="support">Support</option>
+                  </select>
+                  <textarea
+                    rows="4"
+                    placeholder="Message"
+                    className="w-full p-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black text-base"
+                  />
+                  <button
+                    type="submit"
+                    className="w-full bg-black text-white py-3 rounded-md hover:opacity-90 transition text-base font-medium"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-      <Footer />
+      <Test />
     </>
-  )
+  );
 }
