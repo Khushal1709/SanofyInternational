@@ -1,5 +1,5 @@
-
 import { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 import t1 from "../image/t1.jpg";
 import t2 from "../image/t2.jpg";
 import t4 from "../image/t4.jpg";
@@ -46,7 +46,7 @@ const testimonials = [
     content:
       "Sanofy International has truly redefined our expectations from an export partner. From the very beginning, they showed deep understanding of regulatory requirements and product specifications, tailoring each shipment to our exact needs. Their responsiveness, combined with the consistency of their product quality—especially their spices and legumes—has brought tremendous value to our supply chain. We’ve benefited greatly from their proactive updates and real-time logistics coordination, which allows us to operate smoothly and confidently. It’s refreshing to work with a team that prioritizes precision, transparency, and long-term success as much as we do. As we scaled up, Sanofy matched our growth step-for-step—handling larger volumes while maintaining product integrity and freshness.",
     image: t4,
-  }
+  },
 ];
 
 export default function Testimonials() {
@@ -75,6 +75,14 @@ export default function Testimonials() {
       intervalRef.current = setInterval(nextTestimonial, 5000);
     }
   };
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, delay: i * 0.2 },
+    }),
+  };
 
   useEffect(() => {
     intervalRef.current = setInterval(nextTestimonial, 5000);
@@ -88,16 +96,25 @@ export default function Testimonials() {
 
   return (
     <section className="w-full py-10 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center mb-0">
-          <span className="w-2 h-2 sm:w-3 sm:h-3 bg-black inline-block mr-2"></span>
-          <span className="text-xs sm:text-sm text-gray-700 font-medium">
-            Testimonials
-          </span>
-        </div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 mt-4 ">
-          Real feedback from our satisfied clients
-        </h2>
+      <div className="w-full mx-auto px-4 sm:px-6">
+        <motion.div
+          className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-3 h-3 bg-black" />
+            <span className="text-sm text-gray-700 font-medium">
+              {" "}
+              Testimonials
+            </span>
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            Real feedback from our satisfied clients
+          </h2>
+        </motion.div>
 
         <div
           className="relative w-full overflow-hidden mb-10"
@@ -114,12 +131,12 @@ export default function Testimonials() {
                 classes += " z-20 opacity-100 scale-100 translate-x-0";
               } else if (position === testimonials.length - 1) {
                 classes += isMobile
-                  ? " z-10 opacity-50 scale-90 -translate-x-[calc(100%-30px)]"
-                  : " z-10 opacity-50 scale-95 -translate-x-[calc(100%-60px)] sm:-translate-x-[calc(100%-80px)] md:-translate-x-[calc(100%-120px)]";
+                  ? " z-10 opacity-50 scale-90 -translate-x-[calc(100%+20px)]"
+                  : " z-10 opacity-100 scale-95 -translate-x-[calc(100%+40px)] sm:-translate-x-[calc(100%+60px)] md:-translate-x-[calc(90%+80px)] lg:-translate-x-[calc(95%+100px)]";
               } else if (position === 1) {
                 classes += isMobile
-                  ? " z-10 opacity-50 scale-90 translate-x-[calc(100%-30px)]"
-                  : " z-10 opacity-50 scale-95 translate-x-[calc(100%-60px)] sm:translate-x-[calc(100%-80px)] md:translate-x-[calc(100%-120px)]";
+                  ? " z-10 opacity-50 scale-90 translate-x-[calc(100%+20px)]"
+                  : " z-10 opacity-100 scale-95 translate-x-[calc(100%+40px)] sm:translate-x-[calc(100%+60px)] md:translate-x-[calc(90%+80px)] lg:translate-x-[calc(95%+100px)]";
               } else {
                 classes += " opacity-0 scale-75 translate-x-full";
               }
@@ -133,7 +150,7 @@ export default function Testimonials() {
                       position === 0 && isMobile ? "relative" : "absolute",
                   }}
                 >
-                  <div className="bg-black text-white rounded-[20px] sm:rounded-[30px] md:rounded-[40px] p-4 sm:p-6 md:p-8 lg:p-12 w-[calc(100vw-32px)] sm:w-[400px] md:w-[600px] lg:w-[800px] relative">
+                  <div className="bg-black text-white rounded-[20px] sm:rounded-[30px] md:rounded-[40px] p-4 sm:p-6 md:p-8 lg:p-12 w-[calc(100vw-32px)] sm:w-[400px] md:w-[500px] lg:w-[800px] relative">
                     <div className="absolute bottom-70 right-160 opacity-20 z-0 scale-x-150 scale-y-150 rotate-180">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

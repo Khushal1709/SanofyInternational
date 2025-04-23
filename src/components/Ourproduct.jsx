@@ -297,7 +297,7 @@ function Ourproduct() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="flex justify-center">
-            <button className="mb-4 px-4 py-1 bg-gray-200 rounded-full text-sm font-semibold">
+            <button className="mb-4 px-4 py-1 bg-gray-200 rounded-full text-sm ">
               Our Product
             </button>
           </div>
@@ -314,7 +314,7 @@ function Ourproduct() {
                 <input
                   type="text"
                   placeholder="Search Product..."
-                  className="pl-10 pr-4 py-2 border rounded-t-4xl bg-black text-white focus:outline-none w-full"
+                  className="pl-10 pr-4 py-4 border rounded-t-4xl bg-black text-white focus:outline-none w-full"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
@@ -327,14 +327,14 @@ function Ourproduct() {
                 transition={{ duration: 1 }}
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <div className="flex flex-row md:flex-col  flex-wrap">
+                <div className="flex flex-row md:flex-col flex-wrap">
                   {categories.map((cat) => (
                     <button
                       key={cat}
-                      className={`px-4 py-2 rounded text-left cursor-pointer w-full ${
+                      className={`px-4 py-4 rounded-b text-center cursor-pointer w-full ${
                         selectedCategory === cat
-                          ? "bg-black text-white"
-                          : "bg-gray-100 text-black"
+                          ? "bg-black text-white rounded"
+                          : "bg-gray-100 text-black "
                       }`}
                       onClick={() => setSelectedCategory(cat)}
                     >

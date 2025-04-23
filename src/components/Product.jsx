@@ -65,7 +65,7 @@ const ProductShowcase = () => {
         {products.map((product, index) => (
           <motion.div
             key={index}
-            className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition duration-300"
+            className="group bg-white rounded-2xl overflow-hidden transition duration-300"
             variants={fadeInUp}
             initial="hidden"
             whileInView="visible"

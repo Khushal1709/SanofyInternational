@@ -48,8 +48,8 @@ export default function Contact() {
               {/* Contact Card - Full width on mobile, overlay on desktop */}
               <div
                 className={`
-              bg-white rounded-3xl shadow-xl p-4 sm:p-6 
-              md:absolute md:top-1/2 md:left-6 md:-translate-y-1/2 
+              bg-white rounded-3xl shadow-xl p-10 sm:p-6 
+              md:absolute md:top-1/2 md:left-14 md:-translate-y-1/2 
               md:max-w-md md:w-[90%] lg:w-[400px]
               ${!contact1 || window.innerWidth < 768 ? "w-full" : ""}
             `}
@@ -65,10 +65,10 @@ export default function Contact() {
                       />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-base sm:text-lg font-medium">
+                      <span className="text-base sm:text-lg">
                         Email Address:
                       </span>
-                      <span className="text-sm sm:text-base break-words">
+                      <span className="text-sm font-medium sm:text-base break-words">
                         sanofyinternational05@gmail.com
                       </span>
                     </div>
@@ -84,11 +84,11 @@ export default function Contact() {
                       />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-base sm:text-lg font-medium">
+                      <span className="text-base sm:text-lg ">
                         Phone Number:
                       </span>
-                      <span className="text-sm sm:text-base">
-                        +91 79901 65810
+                      <span className="text-sm font-medium sm:text-base">
+                        +91 79901 65810  +91 96627 11312
                       </span>
                     </div>
                   </div>
@@ -103,10 +103,10 @@ export default function Contact() {
                       />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-base sm:text-lg font-medium">
+                      <span className="text-base sm:text-lg ">
                         Location:
                       </span>
-                      <span className="text-sm sm:text-base break-words">
+                      <span className="text-sm sm:text-base font-medium break-words">
                         Nana Varachha, Surat, India
                       </span>
                     </div>

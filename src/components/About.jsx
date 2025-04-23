@@ -158,7 +158,7 @@ const TradeExpertsSection = () => {
 
         {/* Agents Section */}
         <motion.section
-          className="bg-white text-gray-900 px-4 md:px-8 lg:px-16 py-5"
+          className="bg-white text-gray-900 px-4 md:px-8 lg:px-16 py-12"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"

@@ -67,7 +67,7 @@ const HeroSection = () => {
     <>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="mb-4 text-center"
+          className="mb-4 text-center py-6"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
