@@ -63,7 +63,7 @@ export default function Header() {
                 <ChevronDown className="ml-1 h-4 w-4" />
               </div>
             </Link>
-            <div className="absolute left-0 top-full mt-1 w-48 bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto">
+            <div className="absolute left-0 top-full w-48 bg-white shadow-lg ring-1 ring-black ring-opacity-5 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto">
               <ul className="py-1">
                 <li
                   className="block px-4 py-2 text-sm hover:text-white hover:bg-black cursor-pointer"
