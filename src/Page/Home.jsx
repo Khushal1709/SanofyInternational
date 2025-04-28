@@ -43,6 +43,7 @@ import Service from "../components/Service";
 import WhyChoose from "../components/WhyChoose";
 import Test from "../components/Test";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Link } from "react-router-dom";
 const HeroSection = () => {
   const images = [Home1, Home12, Home13];
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -61,6 +62,12 @@ const HeroSection = () => {
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" },
     },
+  };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    });
   };
 
   return (
@@ -127,9 +134,10 @@ const HeroSection = () => {
             >
               Connecting Markets, Empowering Trade Across Borders
             </motion.h2>
-            <button className="bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition">
+            <Link to="/About"><button onClick={scrollToTop} className="bg-black text-white px-6 py-3 rounded-full text-sm font-medium  transition cursor-pointer">
               Learn More
             </button>
+            </Link>
           </motion.div>
 
           {/* Right Column - 3 items */}

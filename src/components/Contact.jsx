@@ -5,7 +5,7 @@ import location from "../image/location.svg";
 import { motion } from "framer-motion";
 import Test from "../components/Test";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import formlogo from "../image/formlogo.svg";
 export default function Contact() {
   return (
     <>
@@ -130,6 +130,9 @@ export default function Contact() {
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 px-1">
                   Fill out this form, let's start trading globally!
                 </h2>
+                <div className="flex justify-center items-center mt-4">
+                <img src={formlogo} alt="Formlogo" className="h-100 w-100" />
+                </div>
               </div>
 
               {/* Form Card */}

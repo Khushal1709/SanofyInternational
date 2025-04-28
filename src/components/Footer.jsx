@@ -31,7 +31,7 @@ const Footer = () => (
         <div>
           <h4 className="font-bold mb-3">Company</h4>
           <ul className="space-y-2 text-white">
-            <li><Link to="/About" onClick={scrollToTop} className="hover:text-cyan-400">About US</Link></li>
+            <li><Link to="/About" onClick={scrollToTop} className="hover:text-cyan-400">About Us</Link></li>
             <li><Link to="/Ourproduct" onClick={scrollToTop} className="hover:text-cyan-400">Product</Link></li>
             <li><Link to="/Blog" onClick={scrollToTop} className="hover:text-cyan-400">Blog</Link></li>
             <li><Link to="/Contact" onClick={scrollToTop} className="hover:text-cyan-400">Contact</Link></li>

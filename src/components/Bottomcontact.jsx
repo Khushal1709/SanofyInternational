@@ -10,6 +10,12 @@ const fadeInUp = {
     transition: { duration: 0.6, delay: i * 0.2 },
   }),
 };
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth', 
+  });
+};
 
 const Bottomcontact = () => {
   return (
@@ -23,7 +29,7 @@ const Bottomcontact = () => {
         variants={fadeInUp}
       >
         <div className="w-3 h-3 bg-black" />
-        <span className="text-lg text-gray-700 font-medium">Contact</span>
+        <span className="text-lg text-gray-700 font-medium " onClick={scrollToTop}>Contact</span>
       </motion.div>
 
       {/* Heading */}
