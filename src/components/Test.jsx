@@ -96,9 +96,9 @@ export default function Testimonials() {
 
   return (
     <section className="w-full py-10 bg-white">
-      <div className="w-full mx-auto px-4 sm:px-6">
+      <div className="w-full mx-auto">
         <motion.div
-          className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -117,7 +117,7 @@ export default function Testimonials() {
         </motion.div>
 
         <div
-          className="relative w-full overflow-hidden mb-10"
+          className="relative w-full overflow-hidden mb-10 p-4"
           style={{ height: isMobile ? "auto" : "550px" }}
         >
           <div className="flex items-center justify-center h-full">
