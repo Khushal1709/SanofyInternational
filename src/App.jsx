@@ -28,8 +28,6 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Test" element={<Test />} />
           <Route path="/Contact" element={<Contact />} />
-
-
           <Route path="/Termsofservice" element={<Termsofservice />} />
           <Route path="/Privacypolicy" element={<Privacypolicy />} />
           <Route path="/Shippingpolicy" element={<Shippingpolicy />} />

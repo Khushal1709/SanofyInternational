@@ -119,7 +119,7 @@ const HeroSection = () => {
           >
             <div className="flex items-center gap-2 mb-2">
               <div className="w-3 h-3 bg-black " />
-              <span className="text-sm text-gray-700 font-medium">About Us</span>
+              <span className="text-lg text-gray-700 font-medium">About Us</span>
             </div>
             <motion.h2
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-justify-between"

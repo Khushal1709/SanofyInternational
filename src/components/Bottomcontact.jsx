@@ -23,7 +23,7 @@ const Bottomcontact = () => {
         variants={fadeInUp}
       >
         <div className="w-3 h-3 bg-black" />
-        <span className="text-sm text-gray-700 font-medium">Contact</span>
+        <span className="text-lg text-gray-700 font-medium">Contact</span>
       </motion.div>
 
       {/* Heading */}

@@ -106,7 +106,7 @@ export default function Testimonials() {
         >
           <div className="flex items-center gap-2 mb-2">
             <div className="w-3 h-3 bg-black" />
-            <span className="text-sm text-gray-700 font-medium">
+            <span className="text-lg text-gray-700 font-medium">
               {" "}
               Testimonials
             </span>

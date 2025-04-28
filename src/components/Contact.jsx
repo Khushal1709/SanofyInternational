@@ -88,7 +88,7 @@ export default function Contact() {
                         Phone Number:
                       </span>
                       <span className="text-sm font-medium sm:text-base">
-                        +91 79901 65810  +91 96627 11312
+                        +91 79901 65810 <br /> +91 96627 11312
                       </span>
                     </div>
                   </div>
@@ -107,7 +107,7 @@ export default function Contact() {
                         Location:
                       </span>
                       <span className="text-sm sm:text-base font-medium break-words">
-                        Nana Varachha, Surat, India
+                         Surat,Gujarat,India
                       </span>
                     </div>
                   </div>

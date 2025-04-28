@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
       >
         <div className="flex items-center gap-2 mb-2">
           <div className="w-3 h-3 bg-black" />
-          <span className="text-sm text-gray-700 font-medium">Why choose us</span>
+          <span className="text-lg text-gray-700 font-medium">Why choose us</span>
         </div>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
           Trusted, efficient, global trade <br />

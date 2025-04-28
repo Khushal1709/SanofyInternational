@@ -48,7 +48,7 @@ const ProductShowcase = () => {
         <div>
           <div className="flex items-center gap-2 mb-2">
             <div className="w-3 h-3 bg-black " />
-            <span className="text-sm text-gray-700 font-medium">Product</span>
+            <span className="text-lg text-gray-700 font-medium">Product</span>
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 max-w-xl leading-snug">
             High-quality, reliable solutions for diverse industries.
