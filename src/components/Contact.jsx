@@ -436,7 +436,7 @@ export default function Contact() {
                   />
                   <button
                     type="submit"
-                    className="w-full bg-black text-white py-3 rounded-md hover:opacity-90 transition text-base font-medium"
+                    className="w-full bg-black text-white py-3 rounded-md hover:opacity-90 transition text-base font-medium cursor-pointer"
                   >
                     Submit
                   </button>
